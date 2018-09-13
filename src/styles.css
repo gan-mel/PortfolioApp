@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+button.mat-button {
+    margin-top: 1.7rem;
+}
+body { margin: 0; ;
+}
+.mat-drawer-content {
+    margin-top: -1rem;
+}
+

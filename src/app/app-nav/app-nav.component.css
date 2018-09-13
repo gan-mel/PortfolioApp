@@ -1,0 +1,44 @@
+#sidenavcon{
+  background: url('https://www.toptal.com/designers/subtlepatterns/patterns/funky-lines.png') repeat;
+  
+}
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+  box-shadow: 3px 0 6px rgba(0,0,0,.24);
+}
+.letter{
+  color:red;
+  position: relative;
+  font-family: 'Roboto Slab', serif;
+  font-weight: bold;
+  font-size: 3rem;
+  padding-left: 37%;
+
+  
+}
+
+/* .letter:hover{
+
+} */
+
+.mat-list-item {
+  transition: background-color 0.5s ease;
+  color: rgb(0, 0, 0);
+}
+/* .element:hover {
+  color: rgb(183, 184, 169);
+} */
+
+.mat-list-item:hover{
+  background-color: rgb(178, 184, 178);
+
+}
+
+.mat-icon{
+  margin-right: 3rem;
+    margin-left: 4rem;
+}
