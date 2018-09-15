@@ -10,15 +10,25 @@
   width: 200px;
   box-shadow: 3px 0 6px rgba(0,0,0,.24);
 }
-.letter{
-  color:red;
+.myName{
+  color:grey;
   position: relative;
   font-family: 'Roboto Slab', serif;
-  font-weight: bold;
-  font-size: 3rem;
-  padding-left: 37%;
+  font-weight: 5;
+  font-size: 1.6rem;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  letter-spacing: 0.3rem
+  /* padding-left: 37%; */
 
   
+}
+
+.titled{
+  color:grey;
+  position: absolute;
+  font-family: 'Roboto Slab', serif;
+  font-size: 0.30rem;
 }
 
 /* .letter:hover{
@@ -27,18 +37,27 @@
 
 .mat-list-item {
   transition: background-color 0.5s ease;
-  color: rgb(0, 0, 0);
+  color: #c9c9c9;
 }
 /* .element:hover {
   color: rgb(183, 184, 169);
 } */
 
 .mat-list-item:hover{
-  background-color: rgb(178, 184, 178);
+  background-color: rgba(94, 94, 94, 0.884);
 
 }
 
 .mat-icon{
   margin-right: 3rem;
-    margin-left: 4rem;
+}
+
+.mat-drawer{
+  background-color:#21201f
+
+}
+
+.mat-toolbar{
+  background-color:#272524
+
 }

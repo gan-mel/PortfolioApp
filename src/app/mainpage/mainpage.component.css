@@ -11,7 +11,7 @@
 }
 
 #first-example {
-    background-image: url('https://hdqwalls.com/download/nature-background-2560x1440.jpg');
+    background-image: url('https://scontent.fsdv1-1.fna.fbcdn.net/v/t31.0-8/12885979_1145452732133072_3561866126069233883_o.jpg?_nc_cat=0&oh=b10aa9afe4e37489e1fc291e156b3c82&oe=5C377DDD');
 }
 
 }
@@ -32,6 +32,15 @@
 
 }
 
+.gigi {
+    border-left: 5px solid #795548;
+    color: #795548;
+    font-size: 125%;
+    font-weight: 400;
+    margin: 20px 0;
+    padding-left: 1.5rem;
+}
+
 .blue {
 
     font-weight: 200;
@@ -41,4 +50,81 @@
     text-transform: uppercase;
 
     background-color: rgb(177, 217, 255);
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Montez');
+@import url(https://fonts.googleapis.com/css?family=Francois+One);
+
+body{
+  background: #f5f7fa;
+  margin:10px;
+  padding:10px;  
+}
+
+blockquote{
+  display:block;
+  background: #fff;
+  padding: 15px 20px 15px 45px;
+  position: relative;
+  
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #ef6817;
+
+  /*Box Shadow - (Optional)*/
+  -moz-box-shadow: 2px 2px 15px #ccc;
+  -webkit-box-shadow: 2px 2px 15px #ccc;
+  box-shadow: 2px 2px 15px #ccc;
+
+  /*Borders - (Optional)*/
+  border-left-style: solid;
+  border-left-width: 15px;
+ 
+}
+
+blockquote::before{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+  
+  /*Font*/
+  font-family: Georgia, serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #999;
+  
+  /*Positioning*/
+  position: absolute;
+  left: 10px;
+  top:5px;
+  
+}
+
+.gigi::after{
+  /*Reset to make sure*/
+  content: "";
+}
+
+.gigi a{
+  text-decoration: none;
+  background: #eee;
+  cursor: pointer;
+  padding: 0 3px;
+  color: #c76c0c;
+}
+
+.gigi a:hover{
+ color: #666;
+}
+
+.gigi em{
+  font-style: italic;
+}
+
+  /*Default Color Palette*/
+  .gigi.default{ 
+  border-left-color: #4fc2e5;
+  border-right-color: #3bb0d6;
 }
