@@ -30,8 +30,12 @@
     }
 }
 
-#about {
+.myFont{
+    font-family: 'Francois One', sans-serif;
 
+}
+
+#about {
 }
 
 .gigi {
@@ -51,7 +55,7 @@
     padding: 30px 40px;
     text-transform: uppercase;
 
-    background-color: rgb(177, 217, 255);
+    background-color: #c9c9c9;
 }
 
 

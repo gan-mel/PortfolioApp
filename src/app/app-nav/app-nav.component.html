@@ -15,13 +15,14 @@
     </mat-toolbar>
     <mat-nav-list>
  
-      <a class="element" mat-list-item routerLink=""><mat-icon >home</mat-icon>Home</a>
+      <a class="element myFont" mat-list-item routerLink=""><mat-icon >home</mat-icon>Home</a>
       <br>
-      <a mat-list-item routerLink="/admin"><mat-icon >fitness_center</mat-icon><span style="">Skills</span></a>
-      
-      <!-- <a mat-list-item routerLink="/admin">Admin Dashboard</a>
-      <a mat-list-item routerLink="/staff">Staff Dashboard</a> -->
+      <a mat-list-item routerLink="/admin"><mat-icon >fitness_center</mat-icon><span class="myFont">Skills</span></a>
 
+  <!-- <a mat-list-item routerLink="/admin">Admin Dashboard</a> -->
+      <a mat-list-item routerLink="/staff">Staff Dashboard</a> 
+     
+      <a mat-list-item routerLink="/test">test Dashboard</a> 
 
 
     </mat-nav-list>
@@ -37,7 +38,10 @@
 
 
     <!-- Content Section Start-->
-    <router-outlet></router-outlet>
+    <main [@fadeAnimation]="getRouterOutletState(o)">
+
+        <router-outlet #o="outlet"></router-outlet>
+      </main>
     <!-- Content Section End-->
   </mat-sidenav-content>
 </mat-sidenav-container>

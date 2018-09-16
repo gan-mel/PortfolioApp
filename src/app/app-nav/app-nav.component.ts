@@ -3,15 +3,19 @@ import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/l
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import * as $ from 'jquery';
+import { fadeAnimation } from '../fadeIn';
 
 @Component({
   selector: 'app-nav',
   templateUrl: './app-nav.component.html',
-  styleUrls: ['./app-nav.component.css']
+  styleUrls: ['./app-nav.component.css'],
+  animations: [fadeAnimation]
 })
 export class AppNavComponent {
 
-
+  public getRouterOutletState(outlet) {
+    return outlet.isActivated ? outlet.activatedRoute : '';
+  }
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
