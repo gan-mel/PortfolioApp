@@ -1,3 +1,7 @@
+
+
+
+
 import { trigger, animate, transition, style, query } from '@angular/animations';
 
 export const fadeAnimation =
@@ -8,12 +12,12 @@ export const fadeAnimation =
 
             query(':enter', 
                 [
-                    style({ opacity: 0 })
+                    style({ position:'fixed', opacity: 0 })
                 ], 
                 { optional: true }
             ),
 
-            query(':leave', 
+            query('main', 
                 [
                     style({ opacity: 1 }),
                     animate('0.5s', style({ opacity: 0 }))
