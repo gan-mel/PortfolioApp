@@ -10,6 +10,8 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { ParallaxModule, ParallaxConfig } from 'ngx-parallax';
 import { TestComponent } from './test/test.component';
 
+import { MzParallaxModule } from 'ngx-materialize';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { TestComponent } from './test/test.component';
     MatSidenavModule,
     MatIconModule,
     MatListModule,
-    ParallaxModule
+    ParallaxModule,
+    MzParallaxModule
   ],
   providers: [],
   bootstrap: [AppComponent]
