@@ -8,3 +8,11 @@ body { margin: 0; ;
     margin-top: -1rem;
 }
 
+.textMargin{
+    margin-left: 4rem;
+    margin-right: 3rem;
+}
+
+.parallax-container .parallax img {
+    min-width:101% !important; 
+}

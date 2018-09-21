@@ -12,8 +12,8 @@
 
 } */
 
-.myFont{
-    font-family: 'Francois One', sans-serif;
+.Roboto{
+    font-family: 'Roboto', sans-serif;
 
 }
 
@@ -47,40 +47,40 @@ body{
   margin:10px;
   padding:10px;  
 }
-
-blockquote{
+blockquote.textMargin{
+    border-left:5px solid #716263;
+}
+/* blockquote{
   display:block;
   background: #fff;
   padding: 15px 20px 15px 45px;
   position: relative;
   
-  /*Font*/
   font-family: Georgia, serif;
   font-size: 14px;
   line-height: 1.2;
   color: #ef6817;
 
-  /*Box Shadow - (Optional)*/
   -moz-box-shadow: 2px 2px 15px #ccc;
   -webkit-box-shadow: 2px 2px 15px #ccc;
   box-shadow: 2px 2px 15px #ccc;
 
-  /*Borders - (Optional)*/
+
   border-left-style: solid;
   border-left-width: 15px;
  
 }
 
 blockquote::before{
-  content: "\201C"; /*Unicode for Left Double Quote*/
+  content: "\201C"; 
   
-  /*Font*/
+
   font-family: Georgia, serif;
   font-size: 60px;
   font-weight: bold;
   color: #999;
   
-  /*Positioning*/
+
   position: absolute;
   left: 10px;
   top:5px;
@@ -88,7 +88,7 @@ blockquote::before{
 }
 
 .gigi::after{
-  /*Reset to make sure*/
+ 
   content: "";
 }
 
@@ -108,8 +108,8 @@ blockquote::before{
   font-style: italic;
 }
 
-  /*Default Color Palette*/
+
   .gigi.default{ 
   border-left-color: #4fc2e5;
   border-right-color: #3bb0d6;
-}
+} */

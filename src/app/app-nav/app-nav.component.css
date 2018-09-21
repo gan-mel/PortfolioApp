@@ -29,7 +29,7 @@
 .titled{
   color:grey;
   position: absolute;
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Roboto', serif;
   font-size: 0.30rem;
 }
 
@@ -40,7 +40,7 @@
 .mat-list-item {
   transition: background-color 0.5s ease;
   color: #c9c9c9;
-  font-family: 'Francois One', 'sans serif';
+  font-family: 'Roboto', 'sans serif';
   letter-spacing: 0.2rem;
 
 }
