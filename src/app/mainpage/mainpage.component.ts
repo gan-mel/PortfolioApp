@@ -11,9 +11,13 @@ import { Component, OnInit } from '@angular/core';
 export class MainpageComponent implements OnInit {
 
 
-  constructor() { }
+  constructor() {
+   }
 
   ngOnInit() {
-  }
+    $(document).ready(function() {
+      $('.carousel').carousel();
+    });
+}
 
 }

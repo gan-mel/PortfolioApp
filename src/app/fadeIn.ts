@@ -19,8 +19,10 @@ export const fadeAnimation =
               ], { optional: true }),
               query(':leave', [
                 style({ transform: 'translateX(0%)' , opacity: 0 }),
-                animate('0.5s ease-in-out', style({ transform: 'translateX(-100%)' , opacity: 1}
-              ], { optional: true }),
+                animate('0.5s ease-in-out', style({ transform: 'translateX(-100%)' , opacity: 1}))
+              ],
+               { optional: true }),
             ])
           ])
-        ])
+        ]);
+

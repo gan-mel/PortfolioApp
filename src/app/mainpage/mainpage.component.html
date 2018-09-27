@@ -89,23 +89,31 @@ I am a very simple card. I am good at containing small bits of information. I am
 </div>
 
 
+    
 
 <div class="col s12 m6 l4">
 
       
-    <mz-card
+    <mz-card 
 class="blue-grey darken-1 white-text card medium"
 [hoverable]="true">
 <mz-card-image>
-<img src="https://media.giphy.com/media/Aixh9lQruuNtv8Hysy/giphy.gif" />
+  <div class="carousel">
+    <a class="carousel-item" href="#one!"><img src="http://i67.tinypic.com/mlihl4.jpg"></a>
+    <a class="carousel-item" href="#two!"><img src="http://i63.tinypic.com/2r5nq.jpg"></a>
+    <a class="carousel-item" href="#three!"><img src="http://i68.tinypic.com/k20fuw.jpg"></a>
+
+  </div>
 </mz-card-image>
 
-<mz-card-title>
-Card Title
+<mz-card-title class="caru">
+Astrology Bot
 </mz-card-title>
-<mz-card-content>
-I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
+<mz-card-content >
+Built using: Express.js, LivePerson SDK, Astrology API, Request-Promise,
+
 </mz-card-content>
+
 <mz-card-action>
 <a href="#">This is a link</a>
 <a href="#">This is a link</a>

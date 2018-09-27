@@ -1,7 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Montez');
 @import url(https://fonts.googleapis.com/css?family=Francois+One);
 
+.carousel{
+  height: 214px !important
+}
 
+
+.card.medium .card-content .caru,  {
+  margin-top:-103px;
+
+}
+
+.caru{
+  margin-top:-103px;
+}
 /* @media only screen and (min-width: 600px) {
 
 
