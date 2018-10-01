@@ -1,0 +1,9 @@
+<app-new-post (onPosted)="onPosted($event)"></app-new-post>
+
+<div *ngFor="let message of messages">
+  <mz-card>
+    <mz-card-title>{{message.author}}</mz-card-title>
+    <mz-card-content>{{message.text}}</mz-card-content>
+
+  </mz-card>
+</div>

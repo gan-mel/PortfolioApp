@@ -8,16 +8,23 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { ParallaxModule, ParallaxConfig } from 'ngx-parallax';
-// import { TestComponent } from './test/test.component';
-
 import { MzParallaxModule, MzCardModule } from 'ngx-materialize';
+import { PostsComponent } from './posts/posts.component';
 
+import {PostsService} from './posts.service';
+import { HttpClientModule } from '@angular/common/http';
+import {HttpModule } from '@angular/http';
+import { NewPostComponent } from './new-post/new-post.component';
+
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppNavComponent,
-    MainpageComponent
+    MainpageComponent,
+    PostsComponent,
+    NewPostComponent
 
   ],
   imports: [
@@ -32,9 +39,12 @@ import { MzParallaxModule, MzCardModule } from 'ngx-materialize';
     MatListModule,
     ParallaxModule,
     MzParallaxModule,
-    MzCardModule
+    MzCardModule,
+    HttpClientModule,
+    HttpModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [PostsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
