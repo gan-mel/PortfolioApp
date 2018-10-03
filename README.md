@@ -1,3 +1,3 @@
 #Portfolio
 
-- Angular 5
+- Angular 6
