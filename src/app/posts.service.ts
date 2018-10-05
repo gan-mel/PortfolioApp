@@ -23,7 +23,7 @@ export class PostsService {
 
     postMessages(message): Observable<any[]> {
       return this.http.post('http://localhost:3000/posts',message)
-        .pipe(map(res => res.json())   )  ;
+        .pipe(map(res => res.json())   );
         
     }
 

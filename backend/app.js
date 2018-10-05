@@ -4,6 +4,12 @@ const router = express.Router();
 const port = 3000
 const path = require('path');
 const bodyParser = require('body-parser');
+require('../build/karma.conf');
+
+// import Endpoint from './endpoint';
+
+// const endpoint = new Endpoint('messagesBoard', 'messages'); 
+// endpoint.entireCollection();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -13,6 +19,8 @@ const nav = [
   { link: '/readPosts', title: 'Read Posts' }
 
 ];
+
+
 
 const postsRouter = require('./src/routes/postsRouter')(nav);
 const readPostRouter = require('./src/routes/readPostRouter')(nav);

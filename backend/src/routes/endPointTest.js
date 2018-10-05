@@ -1,2 +1,4 @@
 import {Endpoint} from './endpoint';
-const endpoint = new Endpoint('/user');
+const endpoint = new Endpoint('messagesBoard', 'messages'); 
+
+endpoint.entireCollection();
