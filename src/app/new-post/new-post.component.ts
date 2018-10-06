@@ -11,12 +11,12 @@ export class NewPostComponent  {
   @Output() onPosted = new EventEmitter();
 
   newMsg = {
-    author: "",
-    text : ""
+    author: '',
+    text : ''
   };
 
   result;
- 
+
 
  constructor(private postsService : PostsService) { 
 
@@ -27,12 +27,12 @@ export class NewPostComponent  {
  posting(): void {
   this.postsService.postMessages(this.newMsg)
       .subscribe(message => this.result = message);
-      this.onPosted.emit(this.newMsg);     
-     
+      this.onPosted.emit(this.newMsg);
+
 }
 
 
- 
+
 //  ngOnInit() {
 //    this.posting()
 //  }

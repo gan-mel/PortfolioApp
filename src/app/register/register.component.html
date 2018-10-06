@@ -1,3 +1,27 @@
-<p>
-  register works!
-</p>
+<mat-card>
+<form>
+<mz-input-container>
+  <i mz-icon-mdi mz-input-prefix>
+  </i>
+  <input mz-input
+    [label]="'Email'"
+    [validate]="true"
+    [dataError]="'Email is invalid'"
+    [dataSuccess]="'Email is valid'"
+    id="email-input"
+    placeholder="Enter your email"
+    length="60"
+    type="email">
+</mz-input-container>
+
+<mz-datepicker-container class="col s12">
+  <input mz-datepicker
+    [label]="'Date of birth'"
+    [(ngModel)]="dateOfBirth"
+    id="datepicker"
+    placeholder="Select your birth date"
+    type="text">
+</mz-datepicker-container>
+
+</form>
+</mat-card>

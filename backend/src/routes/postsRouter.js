@@ -62,7 +62,9 @@ function router(nav) {
       let bod = req.body;
       (async function mongo() {
         let client;
+     if (bod.length > 0){
         try {
+          
           client = await MongoClient.connect(url);
           console.debug('connected to Mongo to Post');
 
@@ -71,14 +73,18 @@ function router(nav) {
           const response = await db.collection('messages').insertOne(bod);
           
           res.json(response);
-
+    
         } catch (err) {
           console.log(err.stack);
           res.sendStatus(500);
         }
 
         client.close();
-      }());
+      } else {
+        console.log("empty value received")
+        res.sendStatus(400);
+      }
+    }  ());
     });
   return posting;
 }

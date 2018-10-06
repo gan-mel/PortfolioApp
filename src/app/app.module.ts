@@ -5,11 +5,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppNavComponent } from './app-nav/app-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule } from '@angular/material';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { ParallaxModule, ParallaxConfig } from 'ngx-parallax';
-import { MzParallaxModule, MzCardModule } from 'ngx-materialize';
+import { MzParallaxModule, MzCardModule, MzInputModule, MzDatepickerModule   } from 'ngx-materialize';
 import { PostsComponent } from './posts/posts.component';
+
 
 import {PostsService} from './posts.service';
 import { HttpClientModule } from '@angular/common/http';
@@ -44,7 +45,10 @@ import { RegisterComponent } from './register/register.component';
     MzCardModule,
     HttpClientModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    MzInputModule,
+    MzDatepickerModule,
+    MatCardModule
   ],
   providers: [PostsService],
   bootstrap: [AppComponent]
