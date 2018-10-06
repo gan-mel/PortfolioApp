@@ -17,6 +17,7 @@ import {HttpModule } from '@angular/http';
 import { NewPostComponent } from './new-post/new-post.component';
 
 import {FormsModule} from '@angular/forms';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import {FormsModule} from '@angular/forms';
     AppNavComponent,
     MainpageComponent,
     PostsComponent,
-    NewPostComponent
+    NewPostComponent,
+    RegisterComponent
 
   ],
   imports: [
