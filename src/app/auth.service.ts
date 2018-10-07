@@ -19,7 +19,7 @@ export class AuthService {
 
 
     registerNew(regForm): Observable<any[]> {
-      return this.http.post('http://localhost:3000/readMessages', regForm)
+      return this.http.post('http://localhost:3000/auth', regForm)
         .pipe(map(res => res.json())   );
 
     }

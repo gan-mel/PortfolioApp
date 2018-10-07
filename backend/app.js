@@ -36,7 +36,7 @@ app.use((req, res, next) => {
 
 app.use('/posts', postsRouter);
 app.use('/readPosts', readPostRouter);
-app.use('/signUp', signUp);
+app.use('/auth', signUp);
 
 
 // app.use(cookieParser());

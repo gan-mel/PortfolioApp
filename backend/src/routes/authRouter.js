@@ -3,12 +3,12 @@ const { MongoClient } = require('mongodb');
 
 const sign = express.Router();
 
-function router(nav){
-    sign.route('/signUp')
-    .post((req,res) => {
+function router(){
+    sign.route('/')
+    .post((req, res) => {
         console.log(req.body);
         res.sendStatus(200);
-    })
+    });
     return sign;
 }
 
