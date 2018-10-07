@@ -4,10 +4,12 @@ import { Http } from '@angular/http';
 import { map } from 'rxjs/operators';
 import {Observable} from 'rxjs';
 
+
 @Injectable({
   providedIn: 'root'
 })
-export class PostsService {
+export class AuthService {
+
   constructor(private http: Http) { }
 
   // getMessages():Observable<any>{
@@ -15,16 +17,14 @@ export class PostsService {
   //   return this.http.get('http://localhost:3000/readMessages');
   //   }
 
-    getMessages(): Observable<any[]> {
-      return this.http.get('http://localhost:3000/readPosts')
-        .pipe(map(res => res.json())   )  ;
 
-    }
-
-    postMessages(message): Observable<any[]> {
-      return this.http.post('http://localhost:3000/posts', message)
+    registerNew(regForm): Observable<any[]> {
+      return this.http.post('http://localhost:3000/readMessages', regForm)
         .pipe(map(res => res.json())   );
 
     }
 
 }
+
+
+

@@ -1,27 +1,56 @@
 <mat-card>
-<form>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+
+
 <mz-input-container>
-  <i mz-icon-mdi mz-input-prefix>
-  </i>
+<input mz-input 
+formControlName="first"
+[label]="'First Name'"
+id="first-input"
+placeholder="Enter your first name"
+length="40"
+type="text"
+>
+</mz-input-container>
+
+<mz-input-container>
   <input mz-input
-    [label]="'Email'"
+  formControlName="last"
+    [label]="'Last Name'"
+  id="last-input"
+  placeholder="Enter your last name"
+  length="40"
+  type="text"
+ >
+  </mz-input-container>
+
+<mz-input-container>
+  <input mz-input
+  formControlName="email"
+      [label]="'Email'"
     [validate]="true"
     [dataError]="'Email is invalid'"
     [dataSuccess]="'Email is valid'"
     id="email-input"
     placeholder="Enter your email"
     length="60"
-    type="email">
+    type="email"
+  >
 </mz-input-container>
 
-<mz-datepicker-container class="col s12">
-  <input mz-datepicker
-    [label]="'Date of birth'"
-    [(ngModel)]="dateOfBirth"
-    id="datepicker"
-    placeholder="Select your birth date"
-    type="text">
-</mz-datepicker-container>
+<mz-input-container>
+  <input mz-input
+  formControlName="password"
+  [label]="'Password'"
+  id="pass-input"
+  placeholder="Enter your desired password"
+  length="10"
+  type="password"
+  >
+  </mz-input-container>
 
+  <button [disabled]="!form.valid"  (click)="onSubmit()" class="btn waves-effect waves-light" type="submit" name="action">Submit
+    <i class="material-icons right">send</i>
+  </button>
 </form>
 </mat-card>

@@ -17,7 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
 import {HttpModule } from '@angular/http';
 import { NewPostComponent } from './new-post/new-post.component';
 
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 
 @NgModule({
@@ -48,7 +48,8 @@ import { RegisterComponent } from './register/register.component';
     FormsModule,
     MzInputModule,
     MzDatepickerModule,
-    MatCardModule
+    MatCardModule,
+    ReactiveFormsModule
   ],
   providers: [PostsService],
   bootstrap: [AppComponent]

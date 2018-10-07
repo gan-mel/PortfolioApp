@@ -18,7 +18,7 @@ export class NewPostComponent  {
   result;
 
 
- constructor(private postsService : PostsService) { 
+ constructor(private postsService: PostsService) {
 
  }
 
