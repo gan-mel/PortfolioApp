@@ -71,6 +71,7 @@ public dateOfBirth = '2017-08-12';
 
   onSubmit(): void {
     if (!this.form.valid) {
+      
       return;
     }
     this.submitted = true;
@@ -78,8 +79,11 @@ public dateOfBirth = '2017-08-12';
     // console.log(this.register);
 
       this.auth.registerNew(this.register)
-      .subscribe(didReg => this.result = didReg);
+           // .subscribe(didReg => this.result = didReg);
+
+    //  .subscribe(didReg => this.result = didReg);
       this.onPosted.emit(this.register);
+      
 
 }
 

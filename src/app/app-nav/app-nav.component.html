@@ -14,12 +14,15 @@
 
     </mat-toolbar>
     <mat-nav-list>
- 
+
       <a class="element" mat-list-item routerLink=""><mat-icon >home</mat-icon>Home</a>
       <br>
-      <a mat-list-item routerLink="/posts"><mat-icon >fitness_center</mat-icon><span>Message Board</span></a>
+      <a mat-list-item routerLink="/posts"><mat-icon >message</mat-icon><span>Message Board</span></a>
       <br>
-      <a mat-list-item routerLink="/register"><mat-icon >fitness_center</mat-icon><span>Message Board</span></a>
+      <a mat-list-item routerLink="/register"><mat-icon >verified_user</mat-icon><span>Register</span></a>
+      <br><br>
+      <a *ngIf="auth.isAuthenticated" mat-list-item routerLink="/register"><mat-icon >supervised_user_circle</mat-icon><span>{{auth.name}}</span></a>
+
   <!-- <a mat-list-item routerLink="/admin">Admin Dashboard</a> -->
       <!-- <a mat-list-item routerLink="/staff">Staff Dashboard</a>  -->
      

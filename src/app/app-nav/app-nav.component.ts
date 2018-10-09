@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import * as $ from 'jquery';
 import { fadeAnimation } from '../fadeIn';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-nav',
@@ -22,7 +23,7 @@ export class AppNavComponent {
       map(result => result.matches)
     );
     
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, private auth: AuthService) {}
 ngOnInit(): void {
 //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
 //Add 'implements OnInit' to the class.
