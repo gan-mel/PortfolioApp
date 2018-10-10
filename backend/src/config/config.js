@@ -6,7 +6,7 @@ var config = {
     },
     default: {
       mongo : {
-        url: '****'
+        url: '*****'
       }
     }
   }
