@@ -19,6 +19,7 @@ import { NewPostComponent } from './new-post/new-post.component';
 
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { RegisterComponent } from './register/register.component';
     MainpageComponent,
     PostsComponent,
     NewPostComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent
 
   ],
   imports: [

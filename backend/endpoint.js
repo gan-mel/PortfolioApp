@@ -1,6 +1,9 @@
 const express = require('express');
 const { MongoClient } = require('mongodb');
 const reading = express.Router();
+var path = require("path");
+var configPath = path.resolve('./src/config/config.js');
+const config = require(configPath).get(process.env.NODE_ENV);
 
 export class Endpoint {
     constructor(dbName, collection, filter, method){
@@ -8,7 +11,8 @@ export class Endpoint {
         this.collection = collection;
         this.filter = filter;
         this.method = method;
-        this.DBurl = 'mongodb+srv://ganner_44:Tultul99++!@gandb-xsdxz.mongodb.net/test?retryWrites=true';
+        this.DBurl = `mongodb+srv://${config.mongo.url}`;
+
 
     }
 

@@ -2,12 +2,17 @@ const express = require('express');
 const { MongoClient } = require('mongodb');
 const jwt = require('jsonwebtoken');
 
+var path = require("path");
+var configPath = path.resolve('./src/config/config.js');
+const config = require(configPath).get(process.env.NODE_ENV);
+
+
 const sign = express.Router();
 
 function router(nav) {
     sign.route('/')
       .post((req, res) => {
-        const url = 'mongodb+srv://ganner_42:Zingin11!@gandb-xsdxz.mongodb.net/test?retryWrites=true';
+        const url = `mongodb+srv://${config.mongo.url}`;
         const dbName = 'authentication';
         let bod = req.body;
         (async function mongo() {

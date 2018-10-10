@@ -17,7 +17,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const nav = [
   { link: '/posts', title: 'posts' },
   { link: '/readPosts', title: 'Read Posts' },
-  { link: '/signUp', title: 'Sign Up' }
+  { link: '/signUp', title: 'Sign Up' },
+  { link: '/login', title: 'login' }
 ];
 
 
@@ -25,6 +26,7 @@ const nav = [
 const postsRouter = require('./src/routes/postsRouter')(nav);
 const readPostRouter = require('./src/routes/readPostRouter')(nav);
 const signUp = require('./src/routes/authRouter')(nav);
+const login = require('./src/routes/loginRouter')(nav);
 
 
 
@@ -37,6 +39,7 @@ app.use((req, res, next) => {
 app.use('/posts', postsRouter);
 app.use('/readPosts', readPostRouter);
 app.use('/auth', signUp);
+app.use('/login', login);
 
 
 // app.use(cookieParser());

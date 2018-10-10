@@ -19,6 +19,7 @@
       <br>
       <a mat-list-item routerLink="/posts"><mat-icon >message</mat-icon><span>Message Board</span></a>
       <br>
+      <a *ngIf="!auth.isAuthenticated" mat-list-item routerLink="/login"><mat-icon >verified_user</mat-icon><span>Login</span></a>
       <a *ngIf="!auth.isAuthenticated" mat-list-item routerLink="/register"><mat-icon >verified_user</mat-icon><span>Register</span></a>
       <br><br><br><br><br><br><br><br>
       <a *ngIf="auth.isAuthenticated" mat-list-item routerLink="/register"><mat-icon >supervised_user_circle</mat-icon><span>{{auth.name}}</span></a>

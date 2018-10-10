@@ -10,7 +10,7 @@ import { Router} from '@angular/router'
 })
 export class AuthService {
 
-  BASE_URL = 'http://localhost:3000/auth';
+  BASE_URL = 'http://localhost:3000';
   NAME_KEY = "name";
   TOKEN_KEY = "token";
 
@@ -31,18 +31,18 @@ export class AuthService {
     return !!localStorage.getItem(this.TOKEN_KEY)
   }
 
+    login(loginDetails) {
+      return this.http.post(this.BASE_URL + '/login', loginDetails).subscribe(res => {
+          this.authenticate(res);
+      });
+
+    }
+
     registerNew(regForm) {
-      return this.http.post(this.BASE_URL, regForm).subscribe(res => {
+      return this.http.post(this.BASE_URL + '/auth', regForm).subscribe(res => {
 
-        const authResponse = res.json();
+        this.authenticate(res);
 
-        if(!authResponse){
-          return;
-        }
-
-        localStorage.setItem(this.TOKEN_KEY,res.json().token)
-        localStorage.setItem(this.NAME_KEY,res.json().name)
-        this.route.navigate(['/']);
       })
 
       
@@ -52,6 +52,16 @@ export class AuthService {
       logout(){
         localStorage.removeItem(this.TOKEN_KEY)
         localStorage.removeItem(this.NAME_KEY)
+      }
+
+      authenticate(res){
+        if(!res){
+          return;
+        }
+
+        localStorage.setItem(this.TOKEN_KEY,res.json().token)
+        localStorage.setItem(this.NAME_KEY,res.json().name)
+        this.route.navigate(['/']);
       }
         // .pipe(
           
